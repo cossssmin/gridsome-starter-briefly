@@ -1,0 +1,38 @@
+::selection {
+  @apply bg-briefly-yellow;
+}
+
+.article-list-link {
+  @apply block px-4 text-black border-l-4 border-transparent transition-article-item;
+}
+
+@screen sm {
+  .article-list-link {
+    @apply text-xl;
+  }
+}
+
+.article-list-link:hover {
+  @apply text-briefly-blue border-briefly-blue;
+}
+
+.article-list-link:hover:visited {
+  @apply text-briefly-indigo border-briefly-indigo;
+}
+
+.filters button {
+  @apply border-b border-transparent;
+}
+
+.filters button:hover {
+  @apply border-gray-500;
+}
+
+.filters .filter-active,
+.filters .filter-active:hover {
+  @apply text-black cursor-default border-b border-black;
+}
+
+.filters button:focus {
+  @apply outline-none;
+}

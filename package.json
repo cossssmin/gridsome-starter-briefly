@@ -1,0 +1,28 @@
+{
+  "name": "gridsome-starter-briefly",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "newpost": "node scripts/newPost.js"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "@gridsome/plugin-google-analytics": "^0.1.0",
+    "@gridsome/plugin-sitemap": "^0.2.0",
+    "@gridsome/source-filesystem": "^0.5.0",
+    "@gridsome/transformer-remark": "^0.3.2",
+    "gridsome": "^0.6.2",
+    "gridsome-plugin-remark-shiki": "^0.3.0",
+    "gridsome-plugin-rss": "^1.1.0",
+    "medium-zoom": "^1.0.4"
+  },
+  "devDependencies": {
+    "moment": "^2.24.0",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.1.2",
+    "tailwindcss": "^1.0.1",
+    "tailwindcss-transitions": "^2.0.0"
+  }
+}
