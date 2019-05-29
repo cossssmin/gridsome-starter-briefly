@@ -2,8 +2,8 @@
   <Layout class="bg-white">
     <main class="py-12 max-w-2xl mx-auto px-6">
       <index-header />
-      <posts-filter :posts="$page.posts.edges" @filter="filterPosts" />
-      <posts-list :posts="$page.posts.edges" />
+      <posts-filter @filter="filterPosts" />
+      <posts-list :posts="$page.posts.edges" :filter="showPosts" />
       <site-footer class="pt-8 pb-4" />
     </main>
   </Layout>
@@ -25,7 +25,7 @@ export default {
   },
   data () {
     return {
-      posts: null
+      showPosts: 'all'
     }
   },
   metaInfo () {
@@ -47,20 +47,9 @@ export default {
       ],
     }
   },
-  mounted () {
-    this.posts = this.$page.posts.edges
-  },
   methods: {
     filterPosts (type) {
-      if (type == 'longer') {
-        this.$page.posts.edges = this.posts.filter(post => post.node.content.replace(/<(?:.|\n)*?>/gm, '').length > 1000)
-        return
-      }
-      if (type == 'shorter') {
-        this.$page.posts.edges = this.posts.filter(post => post.node.content.replace(/<(?:.|\n)*?>/gm, '').length < 1000)
-        return
-      }
-      this.$page.posts.edges = this.posts
+      this.showPosts = type
     }
   },
   computed: {
