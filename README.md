@@ -24,7 +24,7 @@
 - Code syntax highlighting
 - Medium-like image lightbox
 - Open Graph meta tags for posts
-- Alternative index page: [paginated posts list](/paginated/)
+- Alternative index page: [paginated posts list](https://gridsome-starter-briefly.netlify.com/paginated/)
 - Post descriptions: automatic or user-defined
 - Easily show post dates in your locale (moment.js)
 - _Index page post filtering_: show longer or shorter posts
