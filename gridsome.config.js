@@ -29,7 +29,6 @@ module.exports = {
       options: {
         path: 'posts/**/*.md',
         typeName: 'Post',
-        route: '/:slug',
       }
     },
     {
@@ -67,6 +66,10 @@ module.exports = {
       }
     },
   ],
+
+  templates: {
+    Post: '/:title'
+  },
 
   chainWebpack: config => {
     config.module
