@@ -30,17 +30,17 @@ export default {
   },
   metaInfo () {
     return {
-      title: this.config.siteName,
+      title: this.$static.metadata.siteName,
       meta: [
         { property: "og:type", content: 'website' },
-        { property: "og:title", content: this.config.siteName },
-        { property: "og:description", content: this.config.siteDescription },
-        { property: "og:url", content: this.config.siteUrl },
+        { property: "og:title", content: this.$static.metadata.siteName },
+        { property: "og:description", content: this.$static.metadata.siteDescription },
+        { property: "og:url", content: this.$static.metadata.siteUrl },
         { property: "og:image", content: this.ogImageUrl },
 
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: this.config.siteName },
-        { name: "twitter:description", content: this.config.siteDescription },
+        { name: "twitter:title", content: this.$static.metadata.siteName },
+        { name: "twitter:description", content: this.$static.metadata.siteDescription },
         { name: "twitter:site", content: "@cossssmin" },
         { name: "twitter:creator", content: "@cossssmin" },
         { name: "twitter:image", content: this.ogImageUrl },
@@ -57,7 +57,7 @@ export default {
       return config
     },
     ogImageUrl () {
-      return `${this.config.siteUrl}/images/briefly-card.png`
+      return `${this.$static.metadata.siteUrl}/images/briefly-card.png`
     }
   },
 }
@@ -79,4 +79,14 @@ export default {
     }
   }
 </page-query>
+
+<static-query>
+query {
+  metadata {
+    siteName
+    siteUrl
+    siteDescription
+  }
+}
+</static-query>
 
