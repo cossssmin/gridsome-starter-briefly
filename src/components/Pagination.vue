@@ -3,13 +3,13 @@
     <nav role="navigation" aria-label="pagination">
       <ul class="flex items-center justify-between">
         <li class="lg:w-1/5">
-          <g-link v-if="info.currentPage > 1" :to="previousPage(info.currentPage)" class="text-gray-700 hover:text-briefly-blue py-2 transition-color" rel="prev">
+          <g-link v-if="info.currentPage > 1" :to="previousPage(info.currentPage)" class="text-gray-700 hover:text-briefly-blue py-2 transition-colors duration-300" rel="prev">
             &larr; Previous
           </g-link>
         </li>
         <li class="hidden md:flex w-auto text-center text-gray-600">Page {{ info.currentPage }} of {{ info.totalPages }}</li>
         <li class="lg:w-1/5">
-          <g-link v-if="info.currentPage !== info.totalPages" :to="nextPage(info.currentPage,info.totalPages)" class="text-gray-700 hover:text-briefly-blue py-2 transition-color" rel="next">
+          <g-link v-if="info.currentPage !== info.totalPages" :to="nextPage(info.currentPage,info.totalPages)" class="text-gray-700 hover:text-briefly-blue py-2 transition-colors duration-300" rel="next">
             Next &rarr;
           </g-link>
         </li>

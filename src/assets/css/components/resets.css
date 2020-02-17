@@ -3,7 +3,7 @@
 }
 
 .article-list-link {
-  @apply block px-4 text-black border-l-4 border-transparent transition-article-item;
+  @apply block px-4 text-black border-l-4 border-transparent transition-colors duration-300;
 }
 
 @screen sm {
